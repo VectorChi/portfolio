@@ -39,8 +39,8 @@ h1 {
   color: black;
   text-align: center;
   line-height: 250px;
-  width: 1600px;
-  margin: 0;
+  width: 100%;
+  margin-bottom: 64px;
 }
 
 button {
