@@ -1,16 +1,42 @@
 body {
   font-family: "Manrope", sans-serif;
   margin: 0 auto;
-  background-image: url(./images/background.png);
+  background-color: var(--brand_white);
+  background-image: url(./images/Light_background.svg);
 }
+
+:root {
+  --accent_colour: #895eed;
+  --brand_black: #1a1a1a;
+  --brand_white: #fefefe;
+  --light_background: url(./images/Light_backgroun.svg);
+}
+.dark_theme {
+  --accent_colour: #895eed;
+  --brand_black: #fefefe;
+  --brand_white: #1a1a1a;
+  --dark_bacground: url(./images/Dark_background.svg);
+}
+#nav_icon {
+  cursor: pointer;
+  padding-right: 3rem;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding: 1.5rem;
+  margin: 1;
+}
+
 .content {
   /* width: 90%; */
   margin: 0 auto;
-  padding: 4em;
+  padding: 1em;
 }
 h6,
 h1 {
-  color: black;
+  color: var(--brand_black);
   font-weight: 500;
   text-align: center;
 }
@@ -24,7 +50,7 @@ h1 {
   width: 70%;
 }
 .hero h1 span {
-  color: #895eed;
+  color: var(--accent_colour);
 }
 h6 {
   font-size: 1.2rem;
@@ -42,13 +68,14 @@ h1 {
 }
 
 button {
-  background-color: #1a1a1a;
+  background-color: var(--brand_black);
   padding: 16px 52px 16px 52px;
   border-radius: 32px;
   border: none;
   margin-top: 40px;
   font-size: 16px;
-  color: #fefefe;
+  font-weight: 600;
+  color: var(--brand_white);
   text-decoration: none;
   transition: 0.5s ease-out;
 }
@@ -60,7 +87,7 @@ button {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
-  color: #1a1a1a;
+  color: var(--brand_black);
   padding: 0px 2rem;
 }
 .media {
@@ -76,7 +103,7 @@ button {
 p {
   font-size: 0.75rem;
   font-weight: 200;
-  color: #1a1a1a;
+  color: var(--brand_black);
   opacity: 30%;
   text-align: center;
   margin-top: 2.5rem;
@@ -86,7 +113,7 @@ p {
 .polywork:hover,
 .instagram:hover {
   text-decoration-line: underline;
-  text-decoration-color: black;
+  text-decoration-color: var(--brand_black);
 }
 button:hover {
   cursor: pointer;
@@ -104,6 +131,13 @@ button:hover {
     line-height: 1.7rem;
     width: 200px;
   }
+  nav {
+    padding: 0.5;
+    margin: 0;
+  }
+  #nav_icon {
+    padding-right: 0.5rem;
+  }
 }
 @media screen and (min-width: 401px) and (max-width: 480px) {
   h1 {
@@ -115,6 +149,23 @@ button:hover {
     line-height: 2rem;
     width: 250px;
   }
+  nav {
+    padding: 0.5;
+    margin: 0;
+  }
+  #nav_icon {
+    padding-right: 0.5rem;
+  }
+  .media {
+    width: fit-content;
+  }
+  .twitter,
+  .linkedin,
+  .polywork,
+  .instagram {
+    font-size: 1.2rem;
+    padding: 0px 1rem;
+  }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   h1 {
@@ -124,5 +175,12 @@ button:hover {
   h6 {
     font-size: 1.2rem;
     line-height: 2rem;
+  }
+  nav {
+    padding: 0.5;
+    margin: 0;
+  }
+  #nav_icon {
+    padding-right: 0.5rem;
   }
 }
