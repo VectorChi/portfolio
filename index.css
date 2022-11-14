@@ -1,21 +1,21 @@
 body {
   font-family: "Manrope", sans-serif;
   margin: 0 auto;
-  background-color: var(--brand_white);
-  background-image: url(./images/Light_background.svg);
+  /* background-color: var(--brand_white); */
+  /* background-image: var(--light_background); */
 }
 
 :root {
   --accent_colour: #895eed;
   --brand_black: #1a1a1a;
   --brand_white: #fefefe;
-  --light_background: url(./images/Light_backgroun.svg);
+  background-image: url(./images/Light_background.svg);
 }
 .dark_theme {
   --accent_colour: #895eed;
   --brand_black: #fefefe;
   --brand_white: #1a1a1a;
-  --dark_bacground: url(./images/Dark_background.svg);
+  background-image: url(./images/dark_layer.svg);
 }
 #nav_icon {
   cursor: pointer;
