@@ -27,7 +27,6 @@ nav {
   flex-direction: row;
   justify-content: end;
   padding: 1.5rem;
-  margin: 1;
   gap: 28px;
 }
 
@@ -111,34 +110,34 @@ footer {
   font-size: 5rem;
   font-weight: 500;
   letter-spacing: -0.06em;
+  line-height: 160%;
   margin: 0;
 }
 .footer_content {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  padding: 4rem 4rem;
+  width: 90%;
+  padding: 6rem 0rem;
   gap: 4rem;
+  margin: 0 auto;
 }
 .footer_links {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  column-gap: 4rem;
+  row-gap: 5rem;
 }
-.top_link,
-.bottom_link {
-  display: flex;
-  gap: 3rem;
-}
+
 .footer_links a {
+  color: rgba(255, 255, 255, 0.7);
   font-size: 2rem;
-  padding: 24px 0px 0px;
+  font-weight: 500;
+  padding-top: 24px;
   border-top: 2px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8rem;
-  width: 314px;
 }
 .footer_links a .feather {
   width: 32px;
@@ -153,7 +152,8 @@ footer {
 }
 .footer_links a:hover {
   border-top: 2px solid rgba(255, 255, 255, 1);
-  transition: 0.3s ease-in;
+  transition: 0.1s ease-in;
+  color: #fefefe;
 }
 button:hover {
   cursor: pointer;
@@ -182,13 +182,15 @@ button:hover {
     margin: 0;
   }
   #nav_icon {
-    padding-right: 0.5rem;
+    padding-right: 0rem;
+    width: 1.6rem;
+    height: 1.6rem;
   }
   .footer_content h3 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: 500;
     letter-spacing: -0.06em;
-    line-height: 100%;
+    line-height: 120%;
   }
   .footer_content {
     display: flex;
@@ -198,23 +200,22 @@ button:hover {
     padding: 4rem 1rem;
     gap: 4rem;
   }
-  .top_link,
-  .bottom_link {
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-  }
+
   .footer_links a {
-    font-size: 1.5rem;
-    /* padding: 32px 0px 0px; */
+    font-size: 1.3rem;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
   }
   .footer_links {
     width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 2.5rem;
+  }
+  .footer_links a .feather {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.5;
   }
   footer {
     margin-top: 8rem;
@@ -238,56 +239,40 @@ button:hover {
   #nav_icon {
     padding-right: 0.5rem;
   }
-  .media {
-    width: fit-content;
-  }
-  .twitter,
-  .linkedin,
-  .polywork,
-  .instagram {
-    font-size: 1.2rem;
-    padding: 0px 1rem;
-  }
   .footer_content h3 {
     font-size: 3.5rem;
     font-weight: 500;
     letter-spacing: -0.06em;
-    line-height: 100%;
+    line-height: 144%;
   }
   .footer_content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 90%;
-    padding: 4rem 1rem;
+    padding: 4rem 0rem;
     gap: 4rem;
   }
-  .top_link,
-  .bottom_link {
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-  }
+
   .footer_links a {
+    color: #fefefe;
     font-size: 1.5rem;
-    /* padding: 32px 0px 0px; */
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
   }
   .footer_links {
-    width: 100%;
-    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 3.2rem;
   }
   footer {
     margin-top: 8rem;
   }
 }
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 600px) {
   h1 {
-    font-size: 7.4rem;
+    font-size: 7rem;
     line-height: 7.2rem;
   }
   h6 {
@@ -305,7 +290,7 @@ button:hover {
     font-size: 3.5rem;
     font-weight: 500;
     letter-spacing: -0.06em;
-    line-height: 100%;
+    line-height: 160%;
   }
   .footer_content {
     display: flex;
@@ -315,31 +300,41 @@ button:hover {
     padding: 4rem 1rem;
     gap: 4rem;
   }
-  .top_link,
-  .bottom_link {
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-  }
   .footer_links a {
-    font-size: 1.5rem;
-    /* padding: 32px 0px 0px; */
+    color: #fefefe;
+    font-size: 1.8rem;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
   }
   .footer_links {
-    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 3.2rem;
   }
   footer {
     margin-top: 8rem;
   }
 }
-
-@media screen and (min-width: 768px) {
-  .top_link {
-    flex-wrap: wrap;
+@media screen and (min-width: 601px) and (max-width: 767px) {
+  .footer_links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer_links a {
+    font-size: 1.8rem;
+    color: #fefefe;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer_links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer_links a {
+    color: #fefefe;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .footer_links {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
