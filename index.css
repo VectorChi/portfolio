@@ -203,9 +203,9 @@ button:hover {
 
   .footer_links a {
     font-size: 1.3rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
     align-items: center;
     justify-content: space-between;
+    color: #fefefe;
   }
   .footer_links {
     width: 100%;
