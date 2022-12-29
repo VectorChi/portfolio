@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./index.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <nav>
@@ -30,9 +31,14 @@
   <body>
     <div class="content">
       <div class="hero">
-        <h6>👋🏽 Hi there, I am Adimchi 🇳🇬</h6>
-        <h1><span>Goal-Oriented</span> Product Designer</h1>
-        <h6>Building exciting and fuctional user experiences that scale.</h6>
+        <h6 class="greeting">👋🏽 Hi there, I am Adimchi 🇳🇬</h6>
+        <h1 class="main_head">
+          <span class="highlight">Goal-Oriented</span>
+          <span class="rest">Product Designer</span>
+        </h1>
+        <h6 class="subtitle">
+          Building exciting and fuctional user experiences that scale.
+        </h6>
         <a
           href="mailto: adimchisylvester2@gmail.com"
           class="cta"
@@ -71,6 +77,29 @@
     <script src="./script.js"></script>
     <script>
       feather.replace();
+    </script>
+
+    <!-- Load animation -->
+    <script>
+      ScrollReveal().reveal(".greeting", {
+        delay: 200,
+      });
+      ScrollReveal().reveal(".highlight", {
+        delay: 600,
+        easing: "ease-in",
+      });
+      ScrollReveal().reveal(".rest", {
+        delay: 800,
+        easing: "ease-in",
+      });
+      ScrollReveal().reveal(".subtitle", {
+        delay: 1000,
+        distance: "20px",
+      });
+      ScrollReveal().reveal(".cta", {
+        delay: 2000,
+        easing: "ease-in",
+      });
     </script>
   </body>
 </html>
