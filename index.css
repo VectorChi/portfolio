@@ -138,6 +138,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: 0.3s ease-out;
 }
 .footer_links a .feather {
   width: 32px;
@@ -152,8 +153,9 @@ footer {
 }
 .footer_links a:hover {
   border-top: 2px solid rgba(255, 255, 255, 1);
-  transition: 0.1s ease-in;
   color: #fefefe;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 button:hover {
   cursor: pointer;
