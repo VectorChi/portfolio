@@ -8,13 +8,19 @@ body {
   --brand_black: #1a1a1a;
   --brand_white: #fefefe;
   background-image: url(./images/Light_background.svg);
+  --card_black: #1a1a1a;
+  --card_stroke: #ffffff;
 }
 .dark_theme {
   --accent_colour: #895eed;
   --brand_black: #fefefe;
   --brand_white: #1a1a1a;
   background-image: url(./images/dark_layer.svg);
+  --card_black: rgba(34, 36, 38, 0.2);
+  --card_stroke: #333639;
 }
+
+/* nav section */
 #nav_icon {
   cursor: pointer;
   padding-right: 3rem;
@@ -28,6 +34,7 @@ nav {
   gap: 28px;
 }
 
+/* hero content */
 .content {
   margin: 2rem auto;
 }
@@ -64,7 +71,7 @@ h1 {
   margin-bottom: 4rem;
 }
 
-button {
+.hero_button {
   background-color: var(--brand_black);
   padding: 16px 52px 16px 52px;
   border-radius: 32px;
@@ -91,6 +98,59 @@ button {
   font-weight: 600;
 }
 
+/* card section */
+.card_section {
+  width: 90%;
+  margin: 10rem auto;
+}
+.card_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 1.5rem;
+  margin: 0;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card_black);
+  gap: 2rem;
+  padding: 5.8rem 3.5rem;
+  border: 1px solid var(--card_stroke);
+  border-radius: 2rem;
+  transition: 0.3s ease-out;
+}
+
+.card:hover {
+  background-color: #895eed;
+}
+
+.pill {
+  background-color: #fefefe;
+  color: #895eed;
+  width: 27%;
+  padding: 0.8rem 0.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 2rem;
+}
+.pill .feather {
+  margin-bottom: -0.4em;
+}
+
+.card_content p {
+  font-size: 5.6rem;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  color: #fefefe;
+  margin: 0;
+  line-height: 113.6%;
+}
+.card_content {
+  width: 70%;
+}
+
+/* footer */
 footer {
   background-color: #895eed;
   margin-top: 12rem;
@@ -167,7 +227,7 @@ button:hover {
 @media screen and (min-width: 320px) and (max-width: 400px) {
   h1 {
     font-size: 4.5rem;
-    line-height: 5.1rem;
+    line-height: 4.5rem;
     margin-bottom: 1.5rem;
   }
   h6 {
@@ -184,6 +244,35 @@ button:hover {
     width: 1.6rem;
     height: 1.6rem;
   }
+
+  /* card section */
+  .card_wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card_content p {
+    font-size: 3rem;
+  }
+
+  .pill {
+    width: 55%;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 2.8rem 2rem 4.5rem 2rem;
+    border-radius: 1.5rem;
+  }
+  .card_content {
+    width: 100%;
+  }
+  .pill .feather {
+    margin-bottom: -0.2em;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  /* footer section */
   .footer_content h3 {
     font-size: 3.2rem;
     font-weight: 500;
@@ -237,6 +326,34 @@ button:hover {
   #nav_icon {
     padding-right: 0.5rem;
   }
+
+  /* card section */
+  .card_wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card_content p {
+    font-size: 3.5rem;
+  }
+
+  .pill {
+    width: 50%;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 4rem 2rem;
+  }
+  .card_content {
+    width: 100%;
+  }
+  .pill .feather {
+    margin-bottom: -0.2em;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  /* footer section */
   .footer_content h3 {
     font-size: 3.5rem;
     font-weight: 500;
@@ -284,6 +401,34 @@ button:hover {
   #nav_icon {
     padding-right: 0.5rem;
   }
+
+  /* card section */
+  .card_wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card_content p {
+    font-size: 3.5rem;
+  }
+
+  .pill {
+    width: 40%;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 4rem 2rem;
+  }
+  .card_content {
+    width: 70%;
+  }
+  .pill .feather {
+    margin-bottom: -0.2em;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  /* footer section */
   .footer_content h3 {
     font-size: 3.5rem;
     font-weight: 500;
@@ -314,7 +459,36 @@ button:hover {
     margin-top: 8rem;
   }
 }
+
+/* fix hero size */
 @media screen and (min-width: 601px) and (max-width: 767px) {
+  /* card section */
+  .card_wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card_content p {
+    font-size: 4.5rem;
+  }
+
+  .pill {
+    width: 33%;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 5rem 3.5rem;
+  }
+  .card_content {
+    width: 80%;
+  }
+  .pill .feather {
+    margin-bottom: -0.2em;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  /* footer section */
   .footer_links {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -324,6 +498,31 @@ button:hover {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
+  .card_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card_content p {
+    font-size: 3.5rem;
+  }
+
+  .pill {
+    width: 50%;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 3rem 1.5rem;
+  }
+  .card_content {
+    width: 70%;
+  }
+  .pill .feather {
+    margin-bottom: -0.2em;
+    width: 1rem;
+    height: 1rem;
+  }
+
   .footer_links {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -331,7 +530,32 @@ button:hover {
     color: #fefefe;
   }
 }
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+  /* card section */
+  .card_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card_content p {
+    font-size: 4.5rem;
+  }
+
+  .pill {
+    width: 30%;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 5rem 3.5rem;
+  }
+  .card_content {
+    width: 74%;
+  }
+  .pill .feather {
+    margin-bottom: -0.2em;
+    width: 1rem;
+    height: 1rem;
+  }
   .footer_links {
     grid-template-columns: repeat(3, 1fr);
   }
