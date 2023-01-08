@@ -123,6 +123,8 @@ h1 {
 
 .card:hover {
   background-color: #895eed;
+  transform: rotate3d(0, 2, 0.8, 16deg);
+  box-shadow: 31px 44px 34px rgba(137, 94, 237, 0.1);
 }
 
 .pill {
